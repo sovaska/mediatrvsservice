@@ -1,0 +1,35 @@
+### Get all customers
+GET https://localhost:44356/api/mediatorcustomers
+
+### Get single customer
+GET https://localhost:44356/api/mediatorcustomers/1
+
+### Get customer name
+GET https://localhost:44356/api/mediatorcustomers/1/name
+
+### Create customer with correct id and name
+POST https://localhost:44356/api/mediatorcustomers
+Content-Type: application/json
+
+{
+    "id": "1",
+    "name": "asöftalirjgölkjgöldaiuröltiuölfkjgölajr"
+}
+
+### Try to create customer with incorrect id
+POST https://localhost:44356/api/mediatorcustomers
+Content-Type: application/json
+
+{
+    "id": "",
+    "name": "asöftalirjgölkjgöldaiuröltiuölfkjgölajr"
+}
+
+### Try to create customer with incorrect name
+POST https://localhost:44356/api/mediatorcustomers
+Content-Type: application/json
+
+{
+    "id": "1",
+    "name": "asöftalirjgölkjgöldaiuröltiuölfkjasdökaåpgiwuqjtölajgöldkfjgölaiuröoieruölgjölfdajgdsoiftuöleajrölgijdöofugöoi5ajöliggölajr"
+}
